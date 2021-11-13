@@ -10,8 +10,8 @@ public class Main {
     {
         Scanner in1 = new Scanner(System.in);        //инициализация сканера
         
-//        Obchee obchie = new Obchee();
-  //      motor motorishe = new motor();
+        Obchee obchie = new Obchee();
+        Motor motorishe = new Motor();
         Korobka korobas = new Korobka();
         Koleso kolesiko = new Koleso();
     //    Avto Avtom = new Avto(); 

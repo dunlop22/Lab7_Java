@@ -68,32 +68,6 @@ public class Korobka {
         this.tip_korobki = "";
     }
     
-    public void peredach_korobka()
-    {
-        if (this.kolvo_peredach >= 0)
-        {
-            Scanner in = new Scanner(System.in);        //инициализация сканера
-            double new_kolvo = 0;
-            System.out.println("Введите новое количество передач: ");
-            do
-            {
-                if (in.hasNextDouble()){
-                new_kolvo = in.nextDouble();
-                }
-                else
-                {
-                    System.out.println("Количество передач введено неверно, повторите попытку: ");    
-                    in.nextLine();
-                }
-            } while (new_kolvo < 0);
-            this.kolvo_peredach = new_kolvo;
-            System.out.println("\nКоличество передач успешно изменено\n");
-        }
-        else
-        {
-            System.out.println("Информация о коробке передач не найдена. Добавьте информацию прежде, чем изменять количество передач");
-        }
-    }
     
     public static void main(int args) {
     }

@@ -14,7 +14,7 @@ public class Main {
         Motor motorishe = new Motor();
         Korobka korobas = new Korobka();
         Koleso kolesiko = new Koleso();
-    //    Avto Avtom = new Avto(); 
+        Avto Avtom = new Avto(); 
         
         int main_key = 9;
         char c;
@@ -138,20 +138,14 @@ public class Main {
                 case 5:
                     key = 9;
                     do {
-                        System.out.println("1) Создание автомобиля\n2) Просмотр информации\n3) Привязка водителя\n4) Отвязка водителя\n\n0) - выход\n\n");
+                        System.out.println("1) Создание автомобиля\n2) Просмотр информации\n\n0) - выход\n\n");
                         key = in1.nextInt();
                         switch (key) {
                         case 1:
-                            Avtom.new_avto(vod, motorishe, obchie, kolesiko, korobas);
+                            Avtom.new_avto( motorishe, obchie, kolesiko, korobas);
                             break;
                         case 2:
                             Avtom.prosmotr_avto();
-                            break;
-                        case 3:
-                            Avtom.priv_vod(vod);
-                            break;
-                        case 4:
-                            Avtom.otv_vod();
                             break;
                         }
                     } while (key != 0);

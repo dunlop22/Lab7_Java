@@ -11,6 +11,11 @@ public class Motor {
     double kol_vo_cilindr;
     double klapan;
     
+    public void vsego_koni(Help he)
+        {
+            he.vsego += this.koni;
+        }     
+
     public void new_motor_info()
     {
         Scanner in = new Scanner(System.in);        //инициализация сканера
@@ -119,7 +124,7 @@ public class Motor {
         this.name = "";
         this.klapan = -1;
         this.kol_vo_cilindr = -1;
-        this.koni = -1;
+        this.koni = 150;
         this.rab_obem = -1;
         this.rasxod = -1;
     }

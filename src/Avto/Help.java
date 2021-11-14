@@ -5,6 +5,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Help {
-    public int vsego;
+    public int vsego = 0;
     
 }

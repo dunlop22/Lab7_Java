@@ -101,12 +101,35 @@ public class Motor {
     
     public void new_motor(String name, double koni, double klapan, double rasxod, double kol_vo_cilindr, double rab_obem)
     {
-        this.name = name;
-        this.klapan = klapan;
-        this.kol_vo_cilindr = kol_vo_cilindr;
-        this.koni = koni;
-        this.rab_obem = rab_obem;
-        this.rasxod = rasxod;
+        if (name != "")
+        {
+            this.name = name;
+        }
+        
+        if (klapan != 0)
+        {
+            this.klapan = klapan;
+        }
+        
+        if (kol_vo_cilindr != 0)
+        {
+            this.kol_vo_cilindr = kol_vo_cilindr;
+        }
+        
+        if (koni != 0)
+        {
+            this.koni = koni;
+        }
+        
+        if (rab_obem != 0)
+        {
+            this.rab_obem = rab_obem;
+        }
+        
+        if (rasxod != 0)
+        {
+            this.rasxod = rasxod;
+        }
     }
     
     public void prosmotr_motor()

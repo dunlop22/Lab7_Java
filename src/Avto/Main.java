@@ -20,7 +20,7 @@ public class Main {
         char c;
         do
 	{
-            System.out.println("1) Общее\n2) Двигатель\n3) Коробка\n4) Колеса\n5) Автомобиль\n6) Массив\n7)\n\n0) - выход");
+            System.out.println("1) Общее\n2) Двигатель\n3) Коробка\n4) Колеса\n5) Автомобиль\n6) Массив\n7) Возврат значения через вспомогательный класс\n\n0) - выход");
             main_key = in1.nextInt();
             switch (main_key) {
                 case 1:
@@ -190,7 +190,6 @@ public class Main {
                     Mot2.vsego_koni(schet);
                     System.out.println("Количество лошадей в двигателях (№1 + №2): " + schet.vsego + "\n\n\n\n");    
                     break;
-                    
             }
         } while (main_key != 0);
     }

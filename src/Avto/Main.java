@@ -20,7 +20,7 @@ public class Main {
         char c;
         do
 	{
-            System.out.println("1) Общее\n2) Двигатель\n3) Коробка\n4) Колеса\n5) Автомобиль\n\n\n0) - выход");
+            System.out.println("1) Общее\n2) Двигатель\n3) Коробка\n4) Колеса\n5) Автомобиль\n6) Массив\n\n0) - выход");
             main_key = in1.nextInt();
             switch (main_key) {
                 case 1:
@@ -150,6 +150,38 @@ public class Main {
                         }
                     } while (key != 0);
                     break;
+                case 6:
+                    
+                    key = 9;
+                    Scanner in = new Scanner(System.in);        //инициализация сканера
+                    System.out.println("Введите количество коробок в массиве: ");
+                    int n;
+                    n = -1;
+                    do
+                    {
+                        if (in.hasNextInt()){
+                            
+                            n = in.nextInt();
+                        }
+                        else
+                        {
+                            System.out.println("Количество введено неверно, повторите попытку: ");    
+                            in.nextLine();
+                        }
+                    } while (n <= 0);
+                    Korobka Kor = new Korobka();
+                    Korobka Korobka_Massiv = new Korobka(); 
+                    int i;
+                    for (i = 0; i < n; i++)
+                    {
+                        Korobka_Massiv.Korobka_Mass(Kor);    
+                    }
+                    
+                    Korobka_Massiv.Korobka_prosmotr();
+                    
+                    System.out.println("\n\n\n");    
+                    break;
+                    
             }
         } while (main_key != 0);
     }

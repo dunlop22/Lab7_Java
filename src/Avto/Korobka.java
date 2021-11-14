@@ -5,16 +5,26 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Korobka {
-    int kolvo_korobok;
     String tip_korobki;
     double kolvo_peredach;     
     List<Korobka> Korobka_Mass = new ArrayList<>();
     //private korobka[] Korobka_Mass = new korobka[1];
     
+    public void Korobka_prosmotr()
+    {
+        Korobka Kor = new Korobka();    
+        for (int i = 0; i < Korobka_Mass.size(); i++) 
+        {
+            Kor = Korobka_Mass.get(i);
+            System.out.println("\nКоробка №" + (i + 1) + "\n");
+            Kor.prosmotr_korobka();
+        }
+    }
+    
+    
     public void Korobka_Mass(Korobka Kor1)
     {
         Korobka_Mass.add(Kor1);
-	kolvo_korobok++;
     }
             
     public void new_korobka_info()
@@ -64,8 +74,8 @@ public class Korobka {
     
     public Korobka()
     {
-        this.kolvo_peredach = -1;
-        this.tip_korobki = "";
+        this.kolvo_peredach = 6;
+        this.tip_korobki = "АКПП";
     }
     
     

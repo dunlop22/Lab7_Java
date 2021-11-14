@@ -4,6 +4,8 @@ import java.util.Scanner;
 import java.util.*;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.ArrayList;
+import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws IOException
@@ -18,9 +20,10 @@ public class Main {
         
         int main_key = 9;
         char c;
+        Scanner in = new Scanner(System.in);        //инициализация сканера
         do
 	{
-            System.out.println("1) Общее\n2) Двигатель\n3) Коробка\n4) Колеса\n5) Автомобиль\n6) Массив\n7) Возврат значения через вспомогательный класс\n\n0) - выход");
+            System.out.println("1) Общее\n2) Двигатель\n3) Коробка\n4) Колеса\n5) Автомобиль\n6) Массив\n7) Возврат значения через вспомогательный класс\n8) String\n\n0) - выход");
             main_key = in1.nextInt();
             switch (main_key) {
                 case 1:
@@ -152,7 +155,6 @@ public class Main {
                     break;
                 case 6:
                     key = 9;
-                    Scanner in = new Scanner(System.in);        //инициализация сканера
                     System.out.println("Введите количество коробок в массиве: ");
                     int n;
                     n = -1;
@@ -189,6 +191,41 @@ public class Main {
                     System.out.println("Количество лошадей в двигателе №1: " + schet.vsego);    
                     Mot2.vsego_koni(schet);
                     System.out.println("Количество лошадей в двигателях (№1 + №2): " + schet.vsego + "\n\n\n\n");    
+                    break;
+                case 8:
+                    key = 9;
+                    
+                    System.out.println("Введите количество коробок в массиве: ");
+                    int m;
+                    m = -1;
+                    do
+                    {
+                        if (in.hasNextInt()){
+                            
+                            m = in.nextInt();
+                        }
+                        else
+                        {
+                            System.out.println("Количество введено неверно, повторите попытку: ");    
+                            in.nextLine();
+                        }
+                    } while (m <= 0);
+                    Korobka Kor1 = new Korobka();
+                    List<Korobka> Korobka_Massiv1 = new ArrayList<>();
+                    Korobka Kor2 = new Korobka();
+                    //Korobka Korobka_Massiv1 = new Korobka(); 
+                    int j;
+                    String name = " Aisin";
+                    for (j = 0; j < m; j++)
+                    {
+                        Kor1.new_korobka("АКПП №" + (j + 1) + name, 5 + j * 1);
+                        Korobka_Massiv1.add(Kor1);
+                        //Korobka_Massiv1.Korobka_Mass(Kor1);
+                        Kor2 = Korobka_Massiv1.get(0);
+                        Kor2.prosmotr_korobka();
+                        System.out.println("\n");    
+                    }
+                    System.out.println("\n\n\n");    
                     break;
             }
         } while (main_key != 0);

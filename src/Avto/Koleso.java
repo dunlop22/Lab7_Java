@@ -4,11 +4,14 @@ import java.util.Scanner;
 
 public class Koleso {
     
-    double shirina;
-    double visota;
-    double diametr;
-    String tip_diska;
-        
+    private double shirina;
+    private double visota;
+    private double diametr;
+    private String tip_diska;
+    private int id;
+    
+    private static int id_kolesa;
+    private static int kolvo_koles;
     
     
     public void new_koleso_info()
@@ -68,6 +71,8 @@ public class Koleso {
         } while (this.tip_diska == "");
         
     }
+    
+    
     
     public void new_koleso(double shirina, double diametr, double visota, String tip_diska)     //конструктор с параметрами
     {

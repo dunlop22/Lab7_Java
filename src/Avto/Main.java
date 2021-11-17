@@ -113,25 +113,21 @@ public class Main {
                 case 4:
                     key = 9;
                     do {
-                        System.out.println("1) Ввод собственных данных о колесах\n2) Ввод данных по конструктору\n3) Просмотр информации\n\n0) - выход\n\n");
+                        System.out.println("Последний уникальный ID: " + Koleso.id_return() + "\nОбщее количество добавленных колес: " + Koleso.kolvo_return() + "\n\n1) Ввод собственных данных о колесах\n2) Ввод данных по конструктору\n3) Удаление\n\n0) - выход\n\n");
                         key = in1.nextInt();
                         switch (key) {
                         case 1:
                             kolesiko.new_koleso_info();
-                            System.out.println("\nИнформация о колесах добавлена\n");
+                            kolesiko.prosmotr_koleso();     
                             break;
                         case 2:
                             kolesiko.new_koleso(225, 17, 55, "Литье");
-                            System.out.println("\nИнформация о колесах добавлена по конструктору\n");
+                            kolesiko.prosmotr_koleso();     
                             break;
                         case 3:
-                            if (kolesiko.diametr >= 0)
+                            if (Koleso.kolvo_return() > 0)
                             {
-                                kolesiko.prosmotr_koleso();     
-                            }
-                            else
-                            {
-                                System.out.println("Информация о колесах не найдена\n\n");
+                                Koleso.koleso_del();
                             }
                             break;
                         }

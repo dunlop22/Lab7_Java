@@ -69,10 +69,30 @@ public class Koleso {
                 in.nextLine();
             }
         } while (this.tip_diska == "");
-        
+        id_new(this.id);
+        kolvo_koles = kolvo_koles + 1;
     }
     
+    public static void id_new(int id)
+    {
+        id_kolesa = id_kolesa + 1;
+        id = id_kolesa;
+    }
     
+    public static int id_return()
+    {
+        return id_kolesa;
+    }
+    
+    public static int kolvo_return()
+    {
+        return kolvo_koles;
+    }
+    
+    public static void koleso_del()
+    {
+        kolvo_koles = kolvo_koles - 1;
+    }
     
     public void new_koleso(double shirina, double diametr, double visota, String tip_diska)     //конструктор с параметрами
     {
@@ -80,6 +100,9 @@ public class Koleso {
         this.diametr = diametr;
         this.tip_diska = tip_diska;
         this.visota = visota;
+        id_new(this.id);
+        kolvo_koles = kolvo_koles + 1;
+        
     }
     
     public void prosmotr_koleso()       //функция просмотра информации о колесе
@@ -92,6 +115,7 @@ public class Koleso {
 
     public Koleso()     //конструктор без параметров
     {
+        this.id = -1;
         this.diametr = -1.0;
         this.visota = -1;
         this.shirina = -1;
